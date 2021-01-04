@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pocjavis
+    username: pocjavis
+    password: pocjavis
+    schema-username: pocjavis
+    schema-password: pocjavis
+    driver-class-name: org.postgresql.Driver
+    test-while-idle: true
+    validation-query: SELECT 1
+    initialization-mode: always
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      temp.use_jdbc_metadata_defaults: false
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQL82Dialect
+        temp:
+          use_jdbc_metadata_defaults: false

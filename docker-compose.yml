@@ -1,0 +1,18 @@
+version: '3.7'
+
+networks:
+  db:
+
+services:
+  postgres:
+    image: postgres
+    restart: always
+    container_name: pocjavis
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: pocjavis
+      POSTGRES_PASSWORD: pocjavis
+      POSTGRES_USER: pocjavis
+    networks:
+      - db
